@@ -100,5 +100,8 @@ venv.bak/
 # mkdocs documentation
 /site
 
+#librosa 
+/librosa
+
 # mypy
 .mypy_cache/
