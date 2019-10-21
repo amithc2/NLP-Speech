@@ -2,5 +2,5 @@
 Speech Recognition System
 
 **DEPENDENCIES** 
-Librosa 
+\n Librosa- Should be one directory above project or change the import location
 
