@@ -102,6 +102,6 @@ venv.bak/
 
 #librosa 
 /librosa
-
+*.wav
 # mypy
 .mypy_cache/
