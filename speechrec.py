@@ -1,27 +1,21 @@
 import os
+import sys
 import matplotlib.pyplot as plt
 import numpy as np
-import scipy as sp
+import scipy as signal
 import scipy.stats as st
-from librosa import librosa as li
-import librosa.librosa.display
-class speechRec:
-    def __init__(self, audio):
-        self.audiofile = audio
-    def MFCC(self):
-        y, sr = li.load(self.audiofile)
-        self.mfcc = li.feature.mfcc(y=y, sr=sr, n_mfcc = 12)
-        return self.mfcc
+import scipy.io as wavfile
+def preprocess(audio_signal):
+    '''
+    Input constraints - must be a sampled list of values
+    Output - MFCC features for the audio signal
+    '''
+    # pre-emphasis filter to boost high frequency content 
+    shifted_audio =
+    emphasis_audio =
 
 def main():
-    meme = speechRec('audiofile.wav')
-    mfccs = meme.MFCC()
-    plt.figure(figsize=(10, 4))
-    li.display.specshow(mfccs, x_axis='time')
-    plt.colorbar()
-    plt.title('MFCC')
-    plt.tight_layout()
-    plt.show()
+    fs,original = wavfile.read('Sound_original.wav')
 
-if __name__ == "__main__":
+if __name__ == "__main__"
     main()
